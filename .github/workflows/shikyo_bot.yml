@@ -37,4 +37,4 @@ jobs:
           FITS_ID: ${{ secrets.FITS_ID }}
           FITS_PW: ${{ secrets.FITS_PW }}
           GAS_URL: ${{ secrets.GAS_URL }}
-        run: fits_shikyo_github_actions.py
+        run: python fits_shikyo_github_actions.py
