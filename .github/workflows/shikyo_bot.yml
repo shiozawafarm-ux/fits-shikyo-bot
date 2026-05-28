@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # ここに環境変数を追加して警告を消す
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       # 1. リポジトリのプログラムを読み込む
       - uses: actions/checkout@v4
