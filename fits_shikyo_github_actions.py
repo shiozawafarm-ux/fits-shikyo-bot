@@ -40,11 +40,11 @@ def select_ymd(driver, target_date):
     date_y_dd = driver.find_element(By.NAME, "cmb_selectYear")
     Select(date_y_dd).select_by_value(str(target_date.year))
 
-    date_m_dd = driver.find_element(By.NAME, "cmb_selectMonth")
-    Select(date_m_dd).select_by_value(str(target_date.month).zfill(2))
-
     date_d_dd = driver.find_element(By.NAME, "cmb_selectDay")
     Select(date_d_dd).select_by_value(str(target_date.day).zfill(2))
+    
+    date_m_dd = driver.find_element(By.NAME, "cmb_selectMonth")
+    Select(date_m_dd).select_by_value(str(target_date.month).zfill(2))
 
 def click_go_search(driver):
     driver.find_element(By.NAME, "GoSearch").click()
